@@ -1,0 +1,20 @@
+pipeline {
+    agent any
+
+    environment {
+        def myString = "Hello World"
+        def myNumber = 4
+        def myBool = false
+    }
+
+    stages {
+        stage("Demo Variables"){
+            steps {
+                echo "The string is ${myString} \n"
+                echo "The number is ${myNumber} \n"
+                echo "The string value is ${myBool} \n"
+            }
+        }
+    }
+}
+

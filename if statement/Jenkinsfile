@@ -1,0 +1,25 @@
+pipeline {
+
+    agent any
+
+    parameters {
+        booleanParam(defaultValue: false, description: "Deploy?", name: "myBool")
+    }
+
+    stages {
+        stage("Demo") {
+            steps {
+                script {
+                    if (params.myBool == false) {
+                        currentBuild.result = "SUCCESS"
+                        echo "Boolean value is set to: ${params.myBool}"
+                        return
+                    }
+                    else {
+                        echo "Boolean value is set to: ${params.myBool}"
+                    }
+                }
+            }
+        }
+    }
+}

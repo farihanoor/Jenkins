@@ -1,0 +1,31 @@
+pipeline {
+    agent any
+
+    parameters {
+        
+        string(defaultValue: "TEST", description: "Enter Custom Deployment Name: ", name: "stringDeployment")
+
+        booleanParam(defaultValue: false, description:"Confirm deployment?", name:"boolDeployment")
+
+        choice(choices:['EU-WEST-2A', 'EU-WEST-2B', 'EU-WEST-2C'], description: "Which region to deploy in?", name:"choicesDeployment")
+    }
+
+    stages {
+        stage("String") {
+            steps {
+                echo "For string params, the default value is ${params.stringDeployment}"
+            }
+        }
+        stage("Boolean") {
+            steps {
+                echo "For boolean params, the default value is ${params.boolDeployment}"
+            }
+        }
+        stage("Checkbox") {
+            steps {
+                echo "For checkbox, the default value is ${params.choicesDeployment}"
+            }
+        }
+    }
+
+}
