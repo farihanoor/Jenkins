@@ -7,7 +7,7 @@ pipeline {
     stages {
         stage("Demo") {
             steps {
-                echo "The gobal varible is ${myVar}"
+                echo "The global varible is ${myVar}"
             }
         }
     }
