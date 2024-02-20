@@ -1,14 +1,18 @@
 pipeline {
     agent any
     environment {
-        def myVar = "The variable declared under environment is global"
+        def myVar = "Hello World"
     }
 
     stages {
         stage("Demo") {
             steps {
-                echo "The global variable is ${myVar}"
+                myFunction()
             }
         }
     }
+}
+
+def myFunction() {
+    echo "The global variable is ${myVar}"
 }
