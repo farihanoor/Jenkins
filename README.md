@@ -12,7 +12,7 @@
     Note This Project Is Still W.I.P
     <br/>
     <br/>
-    <a href="https://github.com/farihanoor/Jenkins/README">Explore the docs</a>
+    <a href="https://github.com/farihanoor/Jenkins?tab=readme-ov-file">Explore the docs</a>
     .
     <a href="https://github.com/farihanoor/Jenkins/issues">Report Bug</a>
     .
